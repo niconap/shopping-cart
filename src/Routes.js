@@ -12,8 +12,23 @@ class Routes extends Component {
   }
 
   addToCart = (item) => {
+    let newItem = item;
+    newItem.amount = 1;
+    let array = this.state.cartContent;
+    array.filter((item) => {
+      if (item.name === newItem.name) {
+        newItem.amount = item.amount + 1;
+        array.splice(array.indexOf(item), 1);
+        return false;
+      } else {
+        return true;
+      }
+    });
+    console.log(array);
+    array.push(newItem);
+    console.log(array);
     this.setState({
-      cartContent: [...this.state.cartContent, item],
+      cartContent: array,
     });
   };
 
