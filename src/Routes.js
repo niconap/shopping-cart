@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from "./components/Home";
 import Cart from "./components/Cart";
+import Checkout from "./components/Checkout";
 
 class Routes extends Component {
   constructor() {
@@ -24,9 +25,33 @@ class Routes extends Component {
         return true;
       }
     });
-    console.log(array);
     array.push(newItem);
-    console.log(array);
+    this.setState({
+      cartContent: array,
+    });
+  };
+
+  incrementItem = (item) => {
+    let array = this.state.cartContent;
+    let index = array.indexOf(item);
+    let newItem = array[index];
+    newItem.amount += 1;
+    array[index] = newItem;
+    this.setState({
+      cartContent: array,
+    });
+  };
+
+  decrementItem = (item) => {
+    let array = this.state.cartContent;
+    let index = array.indexOf(item);
+    let newItem = array[index];
+    newItem.amount -= 1;
+    if (newItem.amount !== 0) {
+      array[index] = newItem;
+    } else {
+      array.splice(index, 1);
+    }
     this.setState({
       cartContent: array,
     });
@@ -36,13 +61,13 @@ class Routes extends Component {
     return (
       <Router>
         <nav>
-          <h1>FurniShop</h1>
+          <h1 id="pagetitle">furnishop</h1>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/">home</Link>
             </li>
             <li>
-              <Link to="/cart">Cart</Link>
+              <Link to="/cart">cart</Link>
             </li>
           </ul>
         </nav>
@@ -58,9 +83,16 @@ class Routes extends Component {
             exact
             path="/cart"
             render={(props) => (
-              <Cart cart={this.state.cartContent} addToCart={this.addToCart} />
+              <Cart
+                cart={this.state.cartContent}
+                addToCart={this.addToCart}
+                increment={this.incrementItem}
+                decrement={this.decrementItem}
+                itemAmount={this.state.cartContent.length}
+              />
             )}
           />
+          <Route exact path="/checkout" component={Checkout} />
         </Switch>
       </Router>
     );

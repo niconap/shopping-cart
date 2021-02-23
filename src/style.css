@@ -1,16 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
+
 * {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
   margin: auto;
+  outline: none;
 }
 
 nav {
-  background-color: #121212;
-  color: #f1f1f1;
+  background-color: #dddddd;
+  color: #121212;
   padding: 10px;
 }
 
-nav h1 {
+#pagetitle {
   display: inline-block;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+nav a {
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.2s ease;
+}
+
+nav a:hover {
+  color: #8991ff;
 }
 
 nav ul {
@@ -25,5 +40,100 @@ nav li {
 }
 
 nav li a {
+  color: #121212;
+}
+
+#shop {
+  width: 1320px;
+}
+
+.addtocart {
+  background-color: #121212;
+  border: none;
+  padding: 10px;
   color: #f1f1f1;
+  transition: 0.2s ease;
+}
+
+.addtocart:hover {
+  background-color: #8991ff;
+  cursor: pointer;
+}
+
+.addtocart:active {
+  background-color: #6a74ff;
+  cursor: pointer;
+}
+
+.shopitem {
+  display: inline-block;
+  text-align: center;
+  margin: 20px;
+}
+
+#tableimg {
+  background-size: cover;
+  min-width: 400px;
+  min-height: 400px;
+  background-image: url("./table.jpeg");
+}
+
+#bedimg {
+  background-size: cover;
+  background-position: bottom;
+  min-width: 400px;
+  min-height: 400px;
+  background-image: url("./bed.jpeg");
+}
+
+#chairimg {
+  background-size: cover;
+  min-width: 400px;
+  min-height: 400px;
+  background-image: url("./chair.jpeg");
+}
+
+#couchimg {
+  background-size: cover;
+  min-width: 400px;
+  min-height: 400px;
+  background-image: url("./couch.jpeg");
+}
+
+#tablelampimg {
+  background-size: cover;
+  background-position: bottom;
+  min-width: 400px;
+  min-height: 400px;
+  background-image: url("./tablelamp.jpeg");
+}
+
+#deskimg {
+  background-size: cover;
+  background-position: bottom;
+  min-width: 400px;
+  min-height: 400px;
+  background-image: url("./desk.jpeg");
+}
+
+#bookshelfimg {
+  background-size: cover;
+  min-width: 400px;
+  min-height: 400px;
+  background-image: url("./bookshelf.jpeg");
+}
+
+#pictureframeimg {
+  background-size: cover;
+  min-width: 400px;
+  min-height: 400px;
+  background-image: url("./pictureframe.jpeg");
+}
+
+#clockimg {
+  background-size: cover;
+  background-position: center;
+  min-width: 400px;
+  min-height: 400px;
+  background-image: url("./clock.jpeg");
 }
