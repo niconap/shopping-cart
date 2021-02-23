@@ -11,9 +11,9 @@ class Routes extends Component {
     };
   }
 
-  addToCart = () => {
+  addToCart = (item) => {
     this.setState({
-      cartContent: [...this.state.cartContent, "Hi"],
+      cartContent: [...this.state.cartContent, item],
     });
   };
 
