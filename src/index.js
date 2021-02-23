@@ -1,11 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Navbar from "./Navbar";
 import Routes from "./Routes";
+import "./style.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Navbar />
     <Routes />
   </React.StrictMode>,
   document.getElementById("root")

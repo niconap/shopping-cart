@@ -1,0 +1,29 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: auto;
+}
+
+nav {
+  background-color: #121212;
+  color: #f1f1f1;
+  padding: 10px;
+}
+
+nav h1 {
+  display: inline-block;
+}
+
+nav ul {
+  text-align: right;
+  float: right;
+}
+
+nav li {
+  display: inline-block;
+  text-decoration: none;
+  margin: 5px;
+}
+
+nav li a {
+  color: #f1f1f1;
+}
