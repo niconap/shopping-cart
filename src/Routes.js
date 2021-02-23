@@ -58,6 +58,12 @@ class Routes extends Component {
     });
   };
 
+  emptyCart = () => {
+    this.setState({
+      cartContent: [],
+    });
+  };
+
   render() {
     return (
       <Router>
@@ -65,35 +71,40 @@ class Routes extends Component {
           <h2 id="pagetitle">furnishop</h2>
           <ul>
             <li>
-              <Link to="/">home</Link>
+              <Link to="/shopping-cart/">home</Link>
             </li>
             <li>
-              <Link to="/cart">cart</Link>
+              <Link to="/shopping-cart/cart">cart</Link>
             </li>
           </ul>
         </nav>
         <Switch>
           <Route
             exact
-            path="/"
+            path="/shopping-cart/"
             render={(props) => (
               <Home addToCart={this.addToCart} cart={this.state.cartContent} />
             )}
           />
           <Route
             exact
-            path="/cart"
+            path="/shopping-cart/cart"
             render={(props) => (
               <Cart
                 cart={this.state.cartContent}
                 addToCart={this.addToCart}
                 increment={this.incrementItem}
                 decrement={this.decrementItem}
+                emptyCart={this.emptyCart}
                 itemAmount={this.state.cartContent.length}
               />
             )}
           />
-          <Route exact path="/checkout" component={Checkout} />
+          <Route
+            exact
+            path="/shopping-cart/checkout"
+            render={(props) => <Checkout emptyCart={this.emptyCart} />}
+          />
         </Switch>
       </Router>
     );

@@ -1,13 +1,21 @@
 import React from "react";
 import uniqid from "uniqid";
+import { Link } from "react-router-dom";
 
-const Cart = ({ addToCart, cart, increment, decrement, itemAmount }) => {
+const Cart = ({
+  addToCart,
+  cart,
+  increment,
+  decrement,
+  itemAmount,
+  emptyCart,
+}) => {
   const renderCheckOut = () => {
     if (itemAmount !== 0) {
       return (
-        <a id="checkoutbtn" href="/checkout">
-          Complete Order
-        </a>
+        <span id="checkoutbtn">
+          <Link to="/shopping-cart/checkout">complete order</Link>
+        </span>
       );
     } else {
       return;

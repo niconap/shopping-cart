@@ -165,9 +165,8 @@ nav li {
 }
 
 #checkoutbtn {
-  text-align: right;
-  position: absolute;
-  right: 30px;
+  float: right;
+  margin-right: 30px;
 }
 
 h1 {
@@ -178,6 +177,7 @@ h1 {
 
 #cart {
   margin-left: 15px;
+  margin-bottom: 15px;
 }
 
 .item {
@@ -207,4 +207,18 @@ h1 {
 
 #home h1 {
   margin-left: 15px;
+}
+
+#checkout {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#checkoutimg {
+  background-image: url("checkout.jpeg");
+  min-width: 500px;
+  min-height: 500px;
+  background-size: cover;
+  background-position: center;
+  margin-top: 20px;
 }

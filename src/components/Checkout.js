@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-const Checkout = () => {
+const Checkout = ({ emptyCart }) => {
+  useEffect(() => {
+    emptyCart();
+  }, [emptyCart]);
+
   return (
     <div id="checkout">
-      <h1>Thank you for your purchase!</h1>
-      <p>Your order was succesful! Enjoy your new furniture!</p>
+      <h1>thank you for your purchase!</h1>
+      <p>your order was succesful! enjoy your new furniture!</p>
+      <div id="checkoutimg"></div>
     </div>
   );
 };
