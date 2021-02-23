@@ -17,6 +17,7 @@ function Home({ addToCart, cart }) {
 
   return (
     <div id="home">
+      <h1>welcome to furnishop!</h1>
       <div id="shop">
         {items.map((item) => {
           return <Item item={item} addToCart={addToCart} key={uniqid()} />;

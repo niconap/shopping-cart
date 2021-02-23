@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from "./components/Home";
 import Cart from "./components/Cart";
 import Checkout from "./components/Checkout";
+import "./GitHub-Mark-64px.png";
 
 class Routes extends Component {
   constructor() {
@@ -61,7 +62,7 @@ class Routes extends Component {
     return (
       <Router>
         <nav>
-          <h1 id="pagetitle">furnishop</h1>
+          <h2 id="pagetitle">furnishop</h2>
           <ul>
             <li>
               <Link to="/">home</Link>

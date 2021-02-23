@@ -16,26 +16,32 @@ const Cart = ({ addToCart, cart, increment, decrement, itemAmount }) => {
 
   return (
     <div id="cart">
-      {itemAmount}
+      <h1>shopping cart</h1>
+      <span>amount of unique items: {itemAmount}</span>
       {cart.map((item) => {
         return (
           <div className="item" key={uniqid()}>
-            <h3>{item.name}</h3>
-            <span>{item.amount}</span>
-            <button
-              onClick={() => {
-                increment(item);
-              }}
-            >
-              Increment
-            </button>
-            <button
-              onClick={() => {
-                decrement(item);
-              }}
-            >
-              Decrement
-            </button>
+            <div id={item.name + "img"} className="smallimg"></div>
+            <div className="info">
+              <h3>{item.name}</h3>
+              <button
+                onClick={() => {
+                  decrement(item);
+                }}
+                className="countbtn"
+              >
+                -
+              </button>
+              <span className="count">{item.amount}</span>
+              <button
+                onClick={() => {
+                  increment(item);
+                }}
+                className="countbtn"
+              >
+                +
+              </button>
+            </div>
           </div>
         );
       })}

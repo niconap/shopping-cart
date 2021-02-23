@@ -4,6 +4,11 @@
   font-family: Montserrat, Arial, Helvetica, sans-serif;
   margin: auto;
   outline: none;
+  overflow-x: hidden;
+}
+
+html {
+  min-height: 100%;
 }
 
 nav {
@@ -18,13 +23,14 @@ nav {
   letter-spacing: 3px;
 }
 
-nav a {
+a {
+  color: #121212;
   text-decoration: none;
   letter-spacing: 2px;
   transition: 0.2s ease;
 }
 
-nav a:hover {
+a:hover {
   color: #8991ff;
 }
 
@@ -39,10 +45,6 @@ nav li {
   margin: 5px;
 }
 
-nav li a {
-  color: #121212;
-}
-
 #shop {
   width: 1320px;
 }
@@ -50,90 +52,159 @@ nav li a {
 .addtocart {
   background-color: #121212;
   border: none;
+  border-radius: 10px;
   padding: 10px;
   color: #f1f1f1;
   transition: 0.2s ease;
 }
 
-.addtocart:hover {
+.addtocart:hover,
+.countbtn:hover {
   background-color: #8991ff;
   cursor: pointer;
+  box-shadow: 0px 0px 15px #3f3f3f;
 }
 
-.addtocart:active {
+.addtocart:active,
+.countbtn:active {
   background-color: #6a74ff;
   cursor: pointer;
+  box-shadow: none;
+}
+
+.price {
+  color: #8b8b8b;
+  margin-bottom: 3px;
+}
+
+.itemname {
+  letter-spacing: 2px;
+  margin-top: 15px;
+  margin-bottom: 5px;
 }
 
 .shopitem {
+  padding-bottom: 10px;
   display: inline-block;
   text-align: center;
   margin: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px #3f3f3f;
 }
 
 #tableimg {
+  border-radius: 20px;
   background-size: cover;
-  min-width: 400px;
-  min-height: 400px;
   background-image: url("./table.jpeg");
 }
 
 #bedimg {
+  border-radius: 20px;
   background-size: cover;
   background-position: bottom;
-  min-width: 400px;
-  min-height: 400px;
   background-image: url("./bed.jpeg");
 }
 
 #chairimg {
+  border-radius: 20px;
   background-size: cover;
-  min-width: 400px;
-  min-height: 400px;
   background-image: url("./chair.jpeg");
 }
 
 #couchimg {
+  border-radius: 20px;
   background-size: cover;
-  min-width: 400px;
-  min-height: 400px;
   background-image: url("./couch.jpeg");
 }
 
 #tablelampimg {
+  border-radius: 20px;
   background-size: cover;
   background-position: bottom;
-  min-width: 400px;
-  min-height: 400px;
   background-image: url("./tablelamp.jpeg");
 }
 
 #deskimg {
+  border-radius: 20px;
   background-size: cover;
   background-position: bottom;
-  min-width: 400px;
-  min-height: 400px;
   background-image: url("./desk.jpeg");
 }
 
 #bookshelfimg {
+  border-radius: 20px;
   background-size: cover;
-  min-width: 400px;
-  min-height: 400px;
   background-image: url("./bookshelf.jpeg");
 }
 
 #pictureframeimg {
+  border-radius: 20px;
   background-size: cover;
-  min-width: 400px;
-  min-height: 400px;
   background-image: url("./pictureframe.jpeg");
 }
 
 #clockimg {
+  border-radius: 20px;
   background-size: cover;
   background-position: center;
+  background-image: url("./clock.jpeg");
+}
+
+.count {
+  margin: 10px;
+}
+
+.countbtn {
+  background-color: #121212;
+  border: none;
+  border-radius: 50px;
+  width: 20px;
+  height: 20px;
+  color: #f1f1f1;
+  transition: 0.2s ease;
+}
+
+#checkoutbtn {
+  text-align: right;
+  position: absolute;
+  right: 30px;
+}
+
+h1 {
+  letter-spacing: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#cart {
+  margin-left: 15px;
+}
+
+.item {
+  padding-bottom: 10px;
+  margin-top: 15px;
+}
+
+.info {
+  display: inline-block;
+  position: relative;
+  bottom: 1em;
+  left: 1em;
+  padding: 15px;
+}
+
+.smallimg {
+  min-height: 100px;
+  min-width: 100px;
+  max-width: 100px;
+  display: inline-block;
+}
+
+.bigimg {
   min-width: 400px;
   min-height: 400px;
-  background-image: url("./clock.jpeg");
+}
+
+#home h1 {
+  margin-left: 15px;
 }
